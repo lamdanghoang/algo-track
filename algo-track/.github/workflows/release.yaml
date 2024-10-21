@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.vscode/**'
+      - '.idea/**'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  algo-track-contracts-validate:
+    name: Run algo-track-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/algo-track-contracts-ci.yaml
+
+  algo-track-contracts-release:
+    name: Run algo-track-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/algo-track-contracts-cd.yaml
+    needs: algo-track-contracts-validate
+
+  algo-track-frontend-validate:
+    name: Run algo-track-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/algo-track-frontend-ci.yaml
+
+  algo-track-frontend-release:
+    name: Run algo-track-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/algo-track-frontend-cd.yaml
+    needs: algo-track-frontend-validate
