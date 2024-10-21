@@ -15,8 +15,9 @@ import FilterForm from "../FilterForm";
 import { ScrollArea, ScrollBar } from "@/components/ui/ScrollArea"
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 import axios from 'axios';
-import { GovernanceInfo, TokenSentimentInfo, TokenIndicatorInfo } from "@/lib/interface";
+import { GovernanceInfo, TokenSentimentInfo, TokenIndicatorInfo } from "@/libs/interface";
 import { API_URL } from "@/constants/constants";
+import Tracking from "../RWATracking";
 
 const dummy_news = [
     {
@@ -163,7 +164,7 @@ const HomePage = () => {
                         </Panel>
                     </div>
                     <div className="space-y-4 ">
-                        <Panel title="Proposal Effects" height="h-[445px]">
+                        {/* <Panel title="Proposal Effects" height="h-[445px]">
                             {isLoading ? (
                                 <div className="flex items-center justify-center h-full text-gray-50">Loading...</div>
                             ) : error ? (
@@ -171,6 +172,9 @@ const HomePage = () => {
                             ) : (
                                 <List list={renderList(governanceVoteData, Governance)} />
                             )}
+                        </Panel> */}
+                        <Panel title="RWA Tracking" height="h-[445px]">
+                            <Tracking />
                         </Panel>
                         {/* <Panel title="TrackItSearch" height="h-[197px]">
                             <TrackitSearch />
