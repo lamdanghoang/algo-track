@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import {
@@ -22,10 +22,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'
 import logo from "@/assets/logo.png"
+import PeraWallet from '../provider/PeraWalletConnect'
 
 export default function Header() {
-    const { setLoadingFullScreen } = useContext(GlobalContext);
-    const [selectedChain, setSelectedChain] = useState('APTOS');
+    const { setLoadingFullScreen, chain, setChain } = useContext(GlobalContext);
     const [input, setInput] = useState<string>();
     const router = useRouter();
 
@@ -43,6 +43,12 @@ export default function Header() {
         router.push('/kana');
     }
 
+    useEffect(() => {
+        if (chain) {
+            console.log("Selected chain:", chain)
+        }
+    }, [chain])
+
     return (
         <header className="mb-1">
             <div className="container mx-auto px-5 py-3 flex items-center justify-between">
@@ -51,7 +57,6 @@ export default function Header() {
                     <Image src={logo} alt='trackit' height={40} />
                     <span className="font-bold text-2xl leading-10">TrackIt</span>
                 </Link>
-
                 {/* Mobile menu */}
                 <div className="md:hidden">
                     <Sheet>
@@ -66,14 +71,15 @@ export default function Header() {
                                     <label htmlFor="mobile-chain" className="text-sm font-medium">
                                         Select Chain
                                     </label>
-                                    {/* <Select value={selectedChain} onValueChange={setSelectedChain}>
+                                    <Select value={chain} onValueChange={setChain}>
                                         <SelectTrigger id="mobile-chain">
                                             <SelectValue placeholder="Select chain" />
                                         </SelectTrigger>
                                         <SelectContent>
                                             <SelectItem value="APTOS">APTOS</SelectItem>
+                                            <SelectItem value="ALGORAND">ALGORAND</SelectItem>
                                         </SelectContent>
-                                    </Select> */}
+                                    </Select>
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <label htmlFor="mobile-search" className="text-sm font-medium">
@@ -92,7 +98,8 @@ export default function Header() {
                                     {!isClicked && (<><Wallet className="mr-2 h-4 w-4" /> Login</>)}
                                     {isClicked && (<span>{`${"0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa".slice(0, 5)}...${"0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa".slice(-5)}`}</span>)}
                                 </Button> */}
-                                <WalletSelector />
+                                {chain === "APTOS" && <WalletSelector />}
+                                {chain === "ALGORAND" && <PeraWallet />}
                             </nav>
                         </SheetContent>
                     </Sheet>
@@ -106,21 +113,22 @@ export default function Header() {
                         <Input type="submit" value="Search" className='hidden' />
                     </form>
 
-                    {/* <Select value={selectedChain} onValueChange={setSelectedChain}>
+                    <Select value={chain} onValueChange={setChain}>
                         <SelectTrigger className="w-[120px]">
                             <SelectValue placeholder="Select chain" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="SUI">SUI</SelectItem>
                             <SelectItem value="APTOS">APTOS</SelectItem>
+                            <SelectItem value="ALGORAND">ALGORAND</SelectItem>
                         </SelectContent>
-                    </Select> */}
+                    </Select>
 
                     {/* <Button onClick={clickHandler}>
                         {!isClicked && (<><Wallet className="mr-2 h-4 w-4" /> Login </>)}
                         {isClicked && (<span>{`${"0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa".slice(0, 5)}...${"0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa".slice(-5)}`}</span>)}
                     </Button> */}
-                    <WalletSelector />
+                    {chain === "APTOS" && <WalletSelector />}
+                    {chain === "ALGORAND" && <PeraWallet />}
                 </div>
             </div>
         </header>
