@@ -26,9 +26,10 @@ export default function KanabotDashboard() {
     useEffect(() => {
         // Simulating fetching transaction history
         const mockTransactions: Transaction[] = [
-            { id: '1', type: 'buy', amount: 0.5, currency: 'APT', price: 2000, timestamp: Date.now() - 3600000 },
+            { id: '0', type: 'buy', amount: 1000, currency: 'ALGO', price: 0.13, timestamp: Date.now() - 1800000 },
+            { id: '1', type: 'buy', amount: 0.5, currency: 'APT', price: 10, timestamp: Date.now() - 3600000 },
             { id: '2', type: 'sell', amount: 100, currency: 'CETUS', price: 1, timestamp: Date.now() - 7200000 },
-            { id: '3', type: 'buy', amount: 0.1, currency: 'USDT', price: 60000, timestamp: Date.now() - 10800000 },
+            { id: '3', type: 'buy', amount: 0.1, currency: 'BTC', price: 60000, timestamp: Date.now() - 10800000 },
         ]
         setTransactions(mockTransactions)
     }, [])

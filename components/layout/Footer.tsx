@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="flex items-center mb-2 md:mb-0">
-                        <span className="font-bold text-xl">TrackIt</span>
+                        <span className="font-bold text-xl">AlgoTrack</span>
                         <Copyright className="h-4 w-4 mx-2" />
                         <span>{currentYear} All rights reserved.</span>
                     </div>

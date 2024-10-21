@@ -45,6 +45,10 @@ const tokenList = [
         name: "solana",
     },
     {
+        symbol: "ALGO",
+        name: "algorand",
+    },
+    {
         symbol: "APT",
         name: "aptos",
     },
@@ -55,7 +59,7 @@ const tokenList = [
 ]
 
 export default function Pools() {
-    const [selectedToken, setSelectedToken] = useState('aptos');
+    const [selectedToken, setSelectedToken] = useState('algorand');
     const [selectedPosition, setSelectedPosition] = useState('buy');
     const [isLoading, setIsLoading] = useState(false);
     const {

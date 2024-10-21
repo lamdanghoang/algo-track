@@ -54,8 +54,8 @@ export default function Header() {
             <div className="container mx-auto px-5 py-3 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center text-white">
-                    <Image src={logo} alt='trackit' height={40} />
-                    <span className="font-bold text-2xl leading-10">TrackIt</span>
+                    <Image src={logo} alt='algotrack' height={40} />
+                    <span className="font-bold text-2xl leading-10">AlgoTrack</span>
                 </Link>
                 {/* Mobile menu */}
                 <div className="md:hidden">
@@ -76,8 +76,8 @@ export default function Header() {
                                             <SelectValue placeholder="Select chain" />
                                         </SelectTrigger>
                                         <SelectContent>
-                                            <SelectItem value="APTOS">APTOS</SelectItem>
                                             <SelectItem value="ALGORAND">ALGORAND</SelectItem>
+                                            <SelectItem value="APTOS">APTOS</SelectItem>
                                         </SelectContent>
                                     </Select>
                                 </div>
@@ -88,7 +88,7 @@ export default function Header() {
                                     <form className="relative" onSubmit={e => submitHandler(e)}>
                                         <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
                                         <Input onChange={e => changeHandler(e.target.value)}
-                                            id="search" placeholder="Search with TrackIt" className="pl-8"
+                                            id="search" placeholder="Search with AlgoTrack" className="pl-8"
                                             value={input}
                                         />
                                         <Input type="submit" value="Search" className='hidden' />
@@ -109,7 +109,7 @@ export default function Header() {
                 <div className="hidden md:flex items-center space-x-4">
                     <form className="relative" onSubmit={e => submitHandler(e)}>
                         <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                        <Input value={input} onChange={e => changeHandler(e.target.value)} id="search" placeholder="Search with TrackIt" className="pl-8 w-[300px]" />
+                        <Input value={input} onChange={e => changeHandler(e.target.value)} id="search" placeholder="Search with AlgoTrack" className="pl-8 w-[300px]" />
                         <Input type="submit" value="Search" className='hidden' />
                     </form>
 
@@ -118,8 +118,8 @@ export default function Header() {
                             <SelectValue placeholder="Select chain" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="APTOS">APTOS</SelectItem>
                             <SelectItem value="ALGORAND">ALGORAND</SelectItem>
+                            <SelectItem value="APTOS">APTOS</SelectItem>
                         </SelectContent>
                     </Select>
 

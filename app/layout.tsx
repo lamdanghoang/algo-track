@@ -19,8 +19,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Trackit",
-  description: "Trackit",
+  title: "AlgoTrack",
+  description: "AlgoTrack",
 };
 
 export default function RootLayout({
