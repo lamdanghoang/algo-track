@@ -10,7 +10,7 @@ The AlgoTrack project is divided into two main repositories:
 
 This is the main repository that contains the full decentralized application (dApp) including the frontend and Algorand smart contracts. It follows the AlgoKit standard for consistent and efficient development.
 
-Repository: [github.com/your-username/algo-track](https://github.com/your-username/algo-track)
+Repository: [github.com/lamdanghoang/algo-track](https://github.com/lamdanghoang/algo-track)
 
 Key components:
 - `projects/algo-track-frontend/`: React-based frontend application
@@ -22,7 +22,7 @@ Key components:
 
 This repository contains the back-end service that handles off-chain functionalities for AlgoTrack.
 
-Repository: [github.com/your-username/algotrack-be](https://github.com/your-username/algotrack-be)
+Repository: [github.com/lamdanghoang/algotrack-be](https://github.com/lamdanghoang/algotrack-be)
 
 Key components:
 - `src/`: Source code for the backend service
@@ -45,8 +45,8 @@ Key components:
 
 Please refer to the individual README files in each repository for detailed setup and running instructions:
 
-- [algo-track README](https://github.com/your-username/algo-track/README.md)
-- [algotrack-be README](https://github.com/your-username/algotrack-be/README.md)
+- [algo-track README](https://github.com/lamdanghoang/algo-track/README.md)
+- [algotrack-be README](https://github.com/lamdanghoang/algotrack-be/README.md)
 
 ## Contributing
 
