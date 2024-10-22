@@ -918,9 +918,6 @@ video {
 .w-full {
   width: 100%;
 }
-.w-2\/3 {
-  width: 66.666667%;
-}
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
@@ -1311,9 +1308,6 @@ video {
 }
 .fill-current {
   fill: currentColor;
-}
-.object-cover {
-  object-fit: cover;
 }
 .p-1 {
   padding: 0.25rem;
