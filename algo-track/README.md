@@ -1,81 +1,63 @@
-# TrackIt: Decentralized Multi-Chain Analytics Tool
+# AlgoTrack: On-Chain Analysis Tools for Algorand
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.5%2B-blue)](https://www.typescriptlang.org/)
-[![Multi-Chain](https://img.shields.io/badge/Multi--Chain-Ready-orange)](https://trackit.com)
+AlgoTrack is a comprehensive suite of on-chain analysis tools designed specifically for the Algorand blockchain. It provides powerful insights and analytics to help developers, researchers, and investors better understand and interact with the Algorand ecosystem.
 
-TrackIt is a powerful decentralized analytics tool designed to help users analyze on-chain data from multiple protocols across various blockchain networks. With its intuitive dashboard and comprehensive features, TrackIt enables users to gain valuable insights, track token performance, and make informed decisions in the decentralized finance (DeFi) space.
+## Repository Structure
+
+The AlgoTrack project is divided into two main repositories:
+
+### 1. algo-track
+
+This is the main repository that contains the full decentralized application (dApp) including the frontend and Algorand smart contracts. It follows the AlgoKit standard for consistent and efficient development.
+
+Repository: [github.com/your-username/algo-track](https://github.com/your-username/algo-track)
+
+Key components:
+- `projects/algo-track-frontend/`: React-based frontend application
+- `projects/algo-track-contracts/`: Algorand smart contracts written in Python
+- `tests/`: Unit and integration tests
+- `scripts/`: Deployment and utility scripts
+
+### 2. algotrack-be
+
+This repository contains the back-end service that handles off-chain functionalities for AlgoTrack.
+
+Repository: [github.com/your-username/algotrack-be](https://github.com/your-username/algotrack-be)
+
+Key components:
+- `src/`: Source code for the backend service
+- `api/`: API endpoints and controllers
+- `services/`: Business logic and data processing
+- `models/`: Data models and database schemas
+- `config/`: Configuration files
+- `tests/`: Backend unit and integration tests
 
 ## Features
 
-- **Multi-Chain Support**: Analyze data from various blockchain networks, including Aptos, Ethereum, Binance Smart Chain, and more.
-- **Token Sentiment Analysis**: Track the sentiment and performance of different tokens across supported chains.
-- **Proposal Effects Monitoring**: Stay updated on the impact of governance proposals on various protocols.
-- **Real-time Market Data**: Access up-to-date information on token prices, trading volumes, and market trends.
-- **Custom Dashboard Creation**: Build personalized dashboards to track the metrics that matter most to you.
-- **Advanced Filtering**: Use powerful filters to narrow down your analysis based on market cap, holder count, and more.
-- **Wallet Integration**: Connect your wallet for a more personalized experience and to track your own holdings.
-- **Exportable Reports**: Generate and export detailed analysis reports for your research or business needs.
+- Real-time blockchain data analysis
+- Transaction history and patterns
+- Smart contract interaction and analysis
+- Wallet tracking and analytics
+- Custom alerts and notifications
+- Comprehensive API for developers
 
 ## Getting Started
 
-To start using TrackIt, follow these steps:
+Please refer to the individual README files in each repository for detailed setup and running instructions:
 
-1. Visit [https://trackit.com](https://trackit.com) in your web browser.
-2. Click on the "Connect Wallet" button in the top right corner.
-3. Select your preferred blockchain network from the dropdown menu (e.g., APTOS).
-4. Use the search bar to find specific tokens or protocols you're interested in.
-5. Explore the various sections of the dashboard:
-   - Token Sentiment
-   - Analysis
-   - Proposal Effects
-   - Token Indicator
-   - TrackItSearch
-
-## Dashboard Sections
-
-### Token Sentiment
-View the current sentiment and key metrics for popular tokens on the selected network.
-
-### Analysis
-Read the latest news and analysis about significant events in the crypto space.
-
-### Proposal Effects
-Track the outcomes and impacts of governance proposals on various protocols.
-
-### Token Indicator
-Get detailed technical indicators for specific tokens to aid in your trading decisions.
-
-### TrackItSearch
-Use our powerful search feature to find any token, protocol, or transaction across supported networks.
-
-## Customization
-
-TrackIt offers various customization options to tailor your analytics experience:
-
-- **Filters**: Use the right sidebar to filter results based on:
-  - Social media presence
-  - Top holders
-  - Developer activity
-  - Market capitalization
-  - Total holders
-  - Creation date
-
-- **Custom Dashboards**: Create and save custom dashboards to focus on the metrics and tokens that matter most to you.
-
-## Support
-
-If you encounter any issues or have questions about using TrackIt, please visit our [Help Center](https://trackit.com/help) or contact our support team at support@trackit.com.
+- [algo-track README](https://github.com/your-username/algo-track/README.md)
+- [algotrack-be README](https://github.com/your-username/algotrack-be/README.md)
 
 ## Contributing
 
-We welcome contributions from the community! If you'd like to contribute to TrackIt, please check out our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
+We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
 
 ## License
 
-TrackIt is open-source software licensed under the MIT license. See the [LICENSE](LICENSE) file for more details.
+AlgoTrack is released under the [MIT License](LICENSE).
 
----
+## Contact
 
-Start tracking and analyzing on-chain data like never before with TrackIt! 📊🚀
+For any queries or support, please open an issue in the respective repository or contact us at support@algotrack.io.
+
+Happy tracking on Algorand!
